@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { BookingFormI, BookingI, ListingI, UserI } from "./types";
 import { getToken } from "../utils/localStorage";
 
-const baseUrl = "stay-finder-glen-meq33ch0t-akm762xm4s-projects.vercel.app";
+const baseUrl = "stay-finder-glen-meq33ch0t-akm762xm4s-projects.vercel.app/api";
 // const baseUrl = "http://localhost:5000/api"
 
 export const api = createApi({
