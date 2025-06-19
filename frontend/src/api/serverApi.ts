@@ -2,7 +2,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { BookingFormI, BookingI, ListingI, UserI } from "./types";
 import { getToken } from "../utils/localStorage";
 
-const baseUrl = "stay-finder-glen-meq33ch0t-akm762xm4s-projects.vercel.app/api";
+const baseUrl = "https://stay-finder-glen.vercel.app/api";
+const token = getToken();
 // const baseUrl = "http://localhost:5000/api"
 
 export const api = createApi({
@@ -11,7 +12,6 @@ export const api = createApi({
     baseUrl: baseUrl,
     credentials: "include",
     prepareHeaders: (headers) => {
-      const token = getToken();
       if (token) {
         headers.set("Authorization", `Bearer ${token}`);
       }
