@@ -16,10 +16,7 @@ const app = express();
 // Middleware
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "https://stay-finder-glen-4ah8.vercel.app/",
-    ],
+    origin: "*",
     methods: ["GET", "POST", "PUT"],
     credentials: true,
   })
